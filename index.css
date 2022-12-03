@@ -1,0 +1,119 @@
+/* Import Raleway Font */
+@import url('https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+/* Body CSS */
+body {
+	text-align: center;
+	color: white;
+	font-size: 20px;
+    font-family: 'Raleway', sans-serif; /* Raleway Font */
+    background-color: black;
+}
+
+/* Heading 1 CSS (Screen Capture Recorder Prototype) */
+h1{
+    margin-bottom: 30px;
+}
+
+/* Heading 1 CSS (Screen Captures Recorded) */
+h2 {
+    margin-top: 40px;
+}
+
+/* Bold Text CSS */
+b{
+    font-size: 20px;
+    color: rgb(255, 255, 255);
+}
+
+/* Record Status Div CSS */
+#record-status {
+	color: rgb(255, 0, 0);
+	padding: 5px;
+	margin: 6px auto;
+	width: fit-content;
+    font-size: 18px;
+}
+
+/* Video CSS (both preview and recorded video) */
+video {
+    background: url('assets/preview.png') no-repeat center center;
+    background-size: cover;
+    border: 3px dotted white;
+	display: block;
+	margin: 30px auto;
+    margin-bottom: 30px;
+	min-height: 455px;
+    max-width: 800px;
+}
+
+/* Buttons CSS (both start record and stop record button) */
+button {
+    margin: 20px 10px;
+    padding: 10px 15px;
+    border: 2px dotted white;
+    outline: none;
+    border-radius: 20px;
+    background-color: rgba(0, 104, 115, 0.255);
+    color: white;
+}
+
+/* Disabled Button CSS (both start record and stop record button) */
+button:disabled{
+    border: 1px dotted white;
+    background-color: rgba(115, 0, 0, 0.218);
+    color: rgba(255, 255, 255, 0.093);
+}
+
+/* Video Subheadings Div CSS */
+.vid_subheading{
+    padding: 5px;
+    margin: 6px auto;
+}
+
+/* Video Format Buttons Div CSS */
+.vid_format_buttons{
+    margin-bottom: 50px;
+}
+
+/* Text Input CSS */
+input[type="text"]{
+    background-color: rgba(0, 107, 115, 0.266);
+    color: white;
+    border-radius: 20px;
+    width: 200px;
+    height: 16px;
+    border: 2px solid white;
+    transition: 0.2s all linear;
+    padding: 10px;
+    margin-left: 10px;
+}
+
+/* Radio Button Input CSS */
+input[type="radio"]{
+    appearance: none;
+    background-color: rgba(0, 107, 115, 0.266);
+    border-radius: 50%;
+    width: 16px;
+    height: 16px;
+    border: 2px solid white;
+    transition: 0.2s all linear;
+    margin-right: 5px;
+}
+
+/* Checked Radio Button Input CSS */
+input:checked{
+    border: 4px solid white;
+    background-color: rgb(0, 148, 189);
+}
+
+/* Radio Button Label CSS */
+label{
+    font-size: 18px;
+}
+
+/* Download Links CSS */
+a {
+	color: lightblue;
+    padding-bottom: 30px;
+}

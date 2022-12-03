@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+	<!-- Use meta to modify the charset, name, and content -->
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+	<!-- Link main CSS to index page-->
+	<link rel="stylesheet" href="index.css">
+
+	<!-- Title the page to Screen Capture Prototype -->
+	<title>Screen Capture Prototype</title>
+</head>
+
+<body>
+
+	<!-- Screen Capture Prototype Main Heading -->
+	<h1> Screen Capture Prototype </h1>
+
+	<!-- Preview Subheading -->
+	<h5>Preview:</h5>
+
+	<!-- Preview Screen Capture (muted to avoid echo) -->
+	<video autoplay id="preview-video" muted>
+		Video Tag Not Supported! <!-- Error Message if the browser doesn't support the video tag -->
+	</video>
+
+	<!-- Record Status DIV -->
+	<div id="record-status">
+
+		<!-- Not Recording Status -->
+		<b>Status: </b>Not Recording
+	</div>
+
+	<!-- Start Recording Button-->
+	<button type="button" id="start-rec-btn"
+		onclick="startRecord(this, document.getElementById('stop-rec-btn'))">
+
+		Start Recording
+	</button>
+
+	<!-- Stop Recording Button (disabled at first) -->
+	<button type="button" id="stop-rec-btn" disabled
+		onclick="stopRecord(this, document.getElementById('start-rec-btn'))">
+		Stop Recording
+	</button>
+
+	<!-- Screen Capture File Name Input DIV -->
+	<div class="vid_subheading">
+		<b>Screen Capture File Name:  </b>
+		
+		<!-- Video File Name Text Input -->
+		<input type="text" id="file_name" value="My Amazing Screen Recording">
+	</div>
+
+	<!-- Screen Capture File Format Radio Buttons DIV -->
+	<div class="vid_subheading" style="margin-bottom: 50px;">
+		<b>Screen Capture File Format:</b>
+
+		<!-- MP4 Radio Button -->
+		<input type="radio" name="video_file_format" value="mp4" id="mp4" checked>
+		<label for="mp4">.mp4</label>
+
+		<!-- WEBM Radio Button -->
+		<input type="radio" name="video_file_format" value="webm" id="webm">
+		<label for="webm">.webm</label>
+
+		<!-- OGG Radio Button -->
+		<input type="radio" name="video_file_format" value="ogg" id="ogg">
+		<label for="ogg">.ogg</label>
+	</div>
+	
+	<!-- Screen Captures Recorded Subheading (hidden at first; will be visible when a recording has been done; will be visible through JavaScript) -->
+	<h2 style="display: none" id="vids-recorded">Screen Captures Recorded:</h2>
+
+	<!-- Recorded Screen Captures DIV -->
+	<div id="recorded_videos">
+
+		<!-- The recorded videos and its download link will be appended at the bottom of the page wrapper through JavaScript -->
+		<!-- The code added looks like the code below: -->
+		
+		<!-- 
+			<video id="recorded-video" controls>
+				Video Tag Not Supported!
+			</video> 
+
+			<a href="" > Download Video </a>
+		-->
+	</div>
+
+	<!-- Link the Video Capture API JavaScript -->
+	<script src="ScreenCaptureAPI.js"></script>
+
+</body>
+</html>
